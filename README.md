@@ -1,27 +1,30 @@
-# StarterApp
+In an attempt to track our expenses in order to make an informed decision for the day-to-day groceries,
+we need a simple application that could help us keep track of each receipt of a given purchase.
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.7.
+We intend to keep it simple to track just the name, price, barcode of each item. And for each purchase associated with a given receipt we collect only the list of items, receipt number, total amount, and the date of the purchase.
 
-## Development server
+Our goal is to write a frontend application that will archieve that.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
 
-## Code scaffolding
+GOAL
+informed decision
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+NOUN - Data points
+Item - (name, price, barcode),
+Receipt - (receipt number, total amount, date, list-of-items)
 
-## Build
+VERB
+keep track purchase, 
+track-expenses
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
-## Running unit tests
+1 - Create new angular project
+		ng new <project-name>
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+2 - Interpolation
+		{{name-of-variable}} // component.ts
 
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3 - NgModel to bind form element to a variable
+		> Import FormsModule in app.modules.ts
+		> [(ngModel)] = "name-of-variable-in-.ts"
+		
